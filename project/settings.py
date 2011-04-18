@@ -1,5 +1,7 @@
 from os.path import join, dirname
 
+DEBUG = True
+TEMPLATE_DEBUG = True
 
 DATABASES = {
     'default': {
@@ -21,7 +23,11 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.doc.XViewMiddleware',
 )
 
-ROOT_URLCONF = 'proxiedssl.urls'
+ROOT_URLCONF = 'project.urls'
+
+TEMPLATE_DIRS = (
+    join(dirname(__file__), 'templates'),
+)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
