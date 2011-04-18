@@ -1,0 +1,13 @@
+Development
+-----------
+
+This buildout branch can be used to test the proxied ssl middleware. To get it 
+running, perform the following steps:
+
+1. run ``python bootstrap.py``
+2. run ``bin/buildout``
+3. run ``bin/django runserver``
+
+These steps will attempt to checkout the package from github with a read only 
+url. If you wish to use the packaged version of the product, you will need to 
+run ``bin/develop d proxiedssl`` and then ``bin/buildout`` again.
