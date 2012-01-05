@@ -17,5 +17,7 @@ class ProxiedSslWsgiMiddleware(object):
             request.environ['wsgi.url_scheme'] = \
                 request.META['HTTP_X_FORWARDED_PROTOCOL'].lower()
         else:
+            log.debug('not setting wsgi.url_scheme: request.META=%s' % 
+                      (unicode(request.META),))
             return
         log.debug('request.is_secure = %s' % (request.is_secure(),))

@@ -4,18 +4,17 @@ from setuptools import setup, find_packages
 
 
 
-version = '0.1'
+version = '0.1.1'
 
 setup(
     name = 'proxiedssl',
     version = version,
     description = "Django Middleware for handling proxied ssl",
-    long_description = open(join(dirname(__file__), 'README')).read() + "\n" + 
-                       open(join(dirname(__file__), 'HISTORY')).read(),
+    long_description = open(join(dirname(__file__), 'README.rst')).read() + "\n" + 
+                       open(join(dirname(__file__), 'HISTORY.rst')).read(),
     classifiers = [
         "Framework :: Django",
-        "Development Status :: 3 - Alpha",
-        #"Development Status :: 4 - Beta",
+        "Development Status :: 4 - Beta",
         #"Development Status :: 5 - Production/Stable",
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules"],
